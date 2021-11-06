@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th=http://www.thymeleaf.org>
+<head>
+<meta charset="UTF-8">
+<title>This page has no title</title>
+</head>
+<body>
+<h1>ユーザー登録</h1>
+<form action="exam04-result.html" th:action="@{/exam04/show-result}" method="post" th:object="${exam04Form}">
+名前：<input type="text" name="name" th:field="*{name}"><br>
+年齢：<input type="text" name="age" th:field="*{age}"><br>
+コメント：<br>
+<textarea name="comment" rows="5" cols="30" th:field="*{comment}"></textarea><br>
+<button>送信</button>
+</form>
+</body>
+</html>
